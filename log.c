@@ -10,4 +10,5 @@ void write_log(int level, char* log_text) {
 		default: fprintf(logfile_ptr, "ERROR: %s\n", log_text); break; /* by default, treat unknown log level as error */
 	}
 	fflush(logfile_ptr);
+	fclose(logfile_ptr);
 }
